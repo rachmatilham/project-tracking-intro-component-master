@@ -1,0 +1,310 @@
+:root {
+  --red: hsl(0, 100%, 68%);
+  --very-dark-blue: hsl(230, 29%, 20%);
+  --dark-grayish-blue: hsl(230, 11%, 40%);
+  --grayish-blue: hsl(231, 7%, 65%);
+  --light-grayish-blue: hsl(207, 33%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  height: 426px;
+  width: 50%;
+  border-bottom-left-radius: 60px;
+  background-color: var(--light-grayish-blue);
+}
+
+header {
+  padding: 38px 31px 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+header img.logo {
+  width: 24px;
+  height: 24px;
+}
+header .nav-icon {
+  margin-top: 4px;
+  margin-right: 2px;
+  background-image: url(./images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 17px;
+}
+header .nav-icon:hover {
+  cursor: pointer;
+}
+header .nav-icon.active {
+  margin-top: 1px;
+  margin-right: 4px;
+  background-image: url(./images/icon-close.svg);
+  width: 20px;
+  height: 20px;
+}
+header .nav-link {
+  padding: 0 23px;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 100px;
+  right: 33px;
+  width: 83.2%;
+  max-width: 312px;
+  height: 233px;
+  text-align: center;
+  display: none;
+}
+header .nav-link.active {
+  display: block;
+}
+header .nav-link a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.07em;
+  letter-spacing: 0.02em;
+}
+header .nav-link a:hover {
+  text-decoration: underline;
+}
+header ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header ul li {
+  padding: 23px 23px 0;
+  list-style-type: none;
+}
+header ul li a {
+  color: var(--very-dark-blue);
+}
+header ul li.pricing {
+  padding-bottom: 22px;
+}
+header ul li.login {
+  padding-top: 23px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--dark-grayish-blue);
+}
+header ul li.login a {
+  color: var(--dark-grayish-blue);
+}
+
+article .hero-image img {
+  margin-top: 59px;
+  margin-left: 9px;
+  height: 245px;
+}
+
+article .text-content {
+  padding: 0 30px;
+}
+
+article .text-content .flex-container {
+  margin-top: 82px;
+  display: flex;
+  align-items: center;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+}
+article .new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 49px;
+  height: 26px;
+  border-radius: 13px;
+  background-color: var(--very-dark-blue);
+  color: var(--light-grayish-blue);
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: 0.04em;
+}
+article .dashboard {
+  margin-left: 16px;
+  color: var(--grayish-blue);
+  font-size: 0.8em;
+  letter-spacing: 0.365em;
+}
+
+article .body h1 {
+  margin-top: 15px;
+  color: var(--very-dark-blue);
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.22em;
+  line-height: 1;
+}
+article .body p {
+  margin-top: 15px;
+  padding-right: 30px;
+  color: var(--dark-grayish-blue);
+  font-family: "Barlow", sans-serif;
+  line-height: 1.5;
+}
+
+article .call-to-action {
+  margin-top: 25px;
+  padding-bottom: 79px;
+  display: flex;
+  align-items: center;
+}
+article .call-to-action button {
+  width: 154px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  background-color: var(--red);
+  color: var(--light-grayish-blue);
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+}
+article .call-to-action button:hover {
+  cursor: pointer;
+}
+article .call-to-action .preview {
+  margin-left: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.78em;
+  letter-spacing: 0.17em;
+}
+article .call-to-action .preview a {
+  text-decoration: none;
+  color: var(--grayish-blue);
+}
+
+.attribution {
+  font-family: "Barlow", sans-serif;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* RESPONSIVE DESIGN */
+@media (min-width: 992px) {
+  header {
+    padding: 64px 164px 0;
+  }
+  header img.logo {
+    width: 32px;
+    height: 32px;
+  }
+  header .nav-icon {
+    display: none;
+  }
+  header .nav-link {
+    padding: 0;
+    background-color: initial;
+    box-shadow: none;
+    position: relative;
+    top: 0;
+    right: 0;
+    display: block;
+    max-width: 34.2%;
+    height: auto;
+  }
+  header .nav-link a {
+    font-size: 0.95em;
+    letter-spacing: normal;
+  }
+  header ul {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 0;
+  }
+  header ul li {
+    padding: 0;
+    padding-top: 7px;
+  }
+  header ul li.pricing {
+    padding-bottom: 0;
+    padding-right: 15px;
+  }
+  header ul li.login {
+    padding-top: 7px;
+    padding-left: 36px;
+    list-style-type: disc;
+    border: 0;
+    text-align: right;
+    padding-right: 3px;
+  }
+
+  article {
+    padding-left: 164px;
+    display: flex;
+    justify-content: space-between;
+  }
+  article .hero-image {
+    order: 2;
+    width: 45.2%;
+    margin-top: 115px;
+  }
+  article .hero-image img {
+    margin: 0;
+    width: max-content;
+    height: fit-content;
+    max-height: 463px;
+    position: absolute;
+    right: -267px;
+  }
+  article .text-content {
+    padding: 0;
+    order: 1;
+    width: 37.2%;
+    max-width: 50%;
+  }
+
+  article .text-content .flex-container {
+    margin-top: 160px;
+  }
+
+  article .body h1 {
+    margin-top: 17px;
+    margin-left: 1px;
+    font-size: 3.55em;
+  }
+  article .body p {
+    margin-left: 1px;
+    padding-right: 180px;
+  }
+
+  article .call-to-action {
+    margin-top: 79px;
+    padding-bottom: 162px;
+  }
+  article .call-to-action button {
+    width: 185px;
+    height: 48px;
+    font-size: 0.91em;
+  }
+  article .call-to-action .preview {
+    margin-left: 25px;
+    font-size: 1.05em;
+  }
+}
