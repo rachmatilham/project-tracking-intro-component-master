@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution page on Frontend Mentor]()
+- Solution URL: [Solution page on Frontend Mentor](https://www.frontendmentor.io/solutions/project-tracking-intro-component-rkhvzr2E9)
 - Live Site URL: [Github Pages](https://rachmatilham.github.io/project-tracking-intro-component-master/)
 
 ## My process
